@@ -1,13 +1,10 @@
 $(function() {
 
-var urlApi = "https://sportsop-soccer-sports-open-data-v1.p.mashape.com/v1/leagues/serie-a/seasons/15-16/topscorers";
 // console.log(urlApi);
 var body = $('body');
 var headerName = ["POZYCJA", "ZAWODNIK", "GOLE"];
 var table = $('<table>', { 'class': 'table' }).appendTo(document.body);
 var headerRow = $('<tr>', { 'id': 'header'}).appendTo(table);
-
-
 
 function newRecord(scorers) {
   for (var i = 0; i < 3; i++) {
@@ -27,7 +24,7 @@ function newRecord(scorers) {
 
 function loadData() {
   $.ajax({
-      url: urlApi,
+      url: "https://sportsop-soccer-sports-open-data-v1.p.mashape.com/v1/leagues/serie-a/seasons/15-16/topscorers",
       method: 'GET',
       dataType: 'json',
       success: function(response) {
