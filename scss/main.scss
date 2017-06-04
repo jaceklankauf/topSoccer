@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  background-color: rgb(57, 58, 59);
+  background-color: rgb(47, 48, 49);
 }
 
 header {
@@ -47,7 +47,8 @@ header {
       padding-left: 20px;
       line-height: 32px;
       p {
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: 300;
         &#serieTitle {
           font-weight: 400;
           font-size: 24px;
@@ -100,6 +101,28 @@ section.topscorers {
           line-height: 70%;
         }
       }
+    }
+  }
+}
+
+footer {
+  width: 100vw;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  background-color: rgb(21, 23, 25);
+  div.bottom {
+    width: 25vw;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px rgb(47, 48, 49);
+    border-bottom: solid 1px rgb(47, 48, 49);
+    p {
+      color: rgb(80, 90, 100);
     }
   }
 }
