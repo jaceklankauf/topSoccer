@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(57, 58, 59);
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  div.mainWidth {
+    width: 55vw;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    div#logo {
+      width: 120px;
+      height: 120px;
+      background-image: url('../images/serie-a-vector-logo.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: white;
+    }
+    div.title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 20px;
+      line-height: 32px;
+      p {
+        font-size: 16px;
+        &#serieTitle {
+          font-weight: 400;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+section.topscorers {
+  display: flex;
+  justify-content: center;
+  table {
+    width: 55vw;
+    height: 100%;
+    border-collapse: collapse;
+    tr {
+      th.headerCells {
+        background-color: rgb(45, 113, 29);
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        height: 30px;
+        &:nth-child(2) {
+          text-align: left;
+          padding-left: 35px;
+        }
+      }
+      &:nth-child(2n):not(th) {
+        height: 48px;
+        background-color: rgb(229, 229, 229);
+      }
+      &:nth-child(2n+3) {
+        height: 48px;
+        background-color: white;
+      }
+      td {
+        &:first-child,
+        &:last-child{
+          width: 7vw;
+          font-size: 22px;
+          text-align: center;
+          font-weight: 700;
+        }
+        &.playersName {
+          font-size: 18px;
+          padding-left: 35px;
+          border-left: solid 1px black;
+          border-right: solid 1px black;
+          line-height: 70%;
+        }
+      }
+    }
+  }
+}

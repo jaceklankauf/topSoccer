@@ -3,7 +3,8 @@ $(function() {
 // console.log(urlApi);
 var body = $('body');
 var headerName = ["POZYCJA", "ZAWODNIK", "GOLE"];
-var table = $('<table>', { 'class': 'table' }).appendTo(document.body);
+var section = $('.topscorers');
+var table = $('<table>', { 'class': 'table' }).appendTo(section);
 var headerRow = $('<tr>', { 'id': 'header'}).appendTo(table);
 
 function newRecord(scorers) {
@@ -12,6 +13,7 @@ function newRecord(scorers) {
     headerCells.text(headerName[i])
   }
   for (var i = 0; i < 10; i++) {
+    var span = $('<span>');
     var row = $('<tr>', { 'class': 'players'}).appendTo(table);
     var positionCell = $('<td>', { 'class': 'playersPosition'}).appendTo(row);
     var nameCell = $('<td>', { 'class': 'playersName'}).appendTo(row);
