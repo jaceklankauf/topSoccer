@@ -93,12 +93,12 @@ section.topscorers {
           text-align: center;
           font-weight: 700;
         }
-        &.playersName {
+        .playerNameDiv {
           font-size: 18px;
           padding-left: 35px;
-          border-left: solid 1px black;
-          border-right: solid 1px black;
-          line-height: 70%;
+          border-left: solid 1px silver;
+          border-right: solid 1px silver;
+          line-height: 30px;
         }
       }
     }

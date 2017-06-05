@@ -8,7 +8,7 @@ var table = $('<table>', { 'class': 'table' }).appendTo(section);
 var headerRow = $('<tr>', { 'id': 'header'}).appendTo(table);
 
 function newRecord(scorers) {
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < headerName.length; i++) {
     var headerCells = $('<th>', { 'class': 'headerCells'}).appendTo(headerRow);
     headerCells.text(headerName[i])
   }
@@ -16,9 +16,10 @@ function newRecord(scorers) {
     var span = $('<span>');
     var row = $('<tr>', { 'class': 'players'}).appendTo(table);
     var positionCell = $('<td>', { 'class': 'playersPosition'}).appendTo(row);
+    var playerNameDiv = $('<div>', {'class': 'playerNameDiv'}).appendTo(nameCell);
     var nameCell = $('<td>', { 'class': 'playersName'}).appendTo(row);
     var goalCell = $('<td>', { 'class': 'playersGoals'}).appendTo(row);
-    nameCell.text(scorers[i].fullname);
+    playerNameDiv.text(scorers[i].fullname);
     positionCell.text([i+1]);
     goalCell.text(scorers[i].goals)
   }
