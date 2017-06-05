@@ -16,8 +16,8 @@ function newRecord(scorers) {
     var span = $('<span>');
     var row = $('<tr>', { 'class': 'players'}).appendTo(table);
     var positionCell = $('<td>', { 'class': 'playersPosition'}).appendTo(row);
-    var playerNameDiv = $('<div>', {'class': 'playerNameDiv'}).appendTo(nameCell);
     var nameCell = $('<td>', { 'class': 'playersName'}).appendTo(row);
+    var playerNameDiv = $('<div>', { 'class': 'playerNameDiv'}).appendTo(nameCell);
     var goalCell = $('<td>', { 'class': 'playersGoals'}).appendTo(row);
     playerNameDiv.text(scorers[i].fullname);
     positionCell.text([i+1]);
